@@ -113,7 +113,7 @@ class JavaAppScan():
         """
             return list of open ports within range
         """
-        args = [zenPath('libexec', 'nmap'),'-sS','-p',self.portrange,self.ipaddr]
+        args = [zenPath('bin', 'nmap'),'-sS','-p',self.portrange,self.ipaddr]
         lines = self.getExecOutput(args,self.timeout)
         for line in lines:
             info = line.split()
